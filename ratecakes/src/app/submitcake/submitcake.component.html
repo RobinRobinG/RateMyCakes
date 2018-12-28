@@ -1,0 +1,24 @@
+<div class='container'>
+  <div class="submit-container">
+    <div class="col-md-6">
+      <h2>Submit a Cake!</h2>
+      <form (submit)="submitCake()">
+        <p> {{ cake | json }} </p>
+        <div class="form-group">
+            <label for="type">Cake Type</label>
+            <input type="text" class="form-control" name="cake.type" id="type" [(ngModel)]="cake.type">
+          </div>
+        <div class="form-group">
+          <label for="baker">Baker Name</label>
+          <input type="text" class="form-control" name="cake.baker" id="baker" [(ngModel)]="cake.baker">
+        </div>
+        <div class="form-group">
+            <label for="cake_pic">Image URL:</label>
+            <input type="text" class="form-control" name="cake.cake_pic" id="cake_pic" [(ngModel)]="cake.cake_pic">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
